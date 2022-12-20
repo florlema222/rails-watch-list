@@ -24,3 +24,15 @@ import { definitionsFromContext } from "stimulus/webpack-helpers"
 const application = Application.start()
 const context = require.context("controllers", true, /_controller\.js$/)
 application.load(definitionsFromContext(context))
+
+function test() {
+  const a = "3";
+  const b = "8"
+
+  const c = a;
+  a = b;
+  b = c;
+
+  alert("a is " + a);
+  alert("b is " + b);
+}
